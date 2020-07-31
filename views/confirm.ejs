@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+
+
+<form action="/buy" method="post" id="contact-form">
+
+  <div class="confirm-top">
+      <input class="form-control" type="text" name="address" value="<%=address%>">
+  </div>
+<div class="confirm-bottom">
+  <button class="btn btn-lg btn-primary" type="submit" name="clothing" value="<%=id%>">Confirm Delivery</button>
+</div>
+ 
+</form>
+
+
+
+<%- include("partials/footer.ejs") -%>
