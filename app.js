@@ -23,7 +23,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://bishtankit:12345livehard@cluster0.srme2.mongodb.net/stylesDB", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://bishtankit:okbro123@cluster0.srme2.mongodb.net/stylesDB", { useNewUrlParser: true });
 mongoose.set("useCreateIndex", true);
 
 const aboutContent = "Hey there! ";
@@ -277,10 +277,12 @@ if(req.isAuthenticated()){
 
 
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 
 
-
-
-app.listen(3000, function() {
-  console.log("Server started on port 3000");
+app.listen(port, function() {
+  console.log("Server started Successfully");
 });
