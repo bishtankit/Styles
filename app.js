@@ -23,7 +23,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://bishtankit:okbro123@cluster0.srme2.mongodb.net/stylesDB", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://bishtankit:okbro123@cluster0.lvc5n.mongodb.net/stylesDB", { useNewUrlParser: true });
 mongoose.set("useCreateIndex", true);
 
 const aboutContent = "Hey there! ";
@@ -280,6 +280,6 @@ var server = app.listen(process.env.PORT || 5000, function () {
 });
 
 
-// app.listen(port, function() {
+// app.listen(3000, function() {
 //   console.log("Server started Successfully");
 // });
