@@ -65,24 +65,24 @@ date = date+"-"+month+"-"+year;
 
 app.get("/", function(req, res){
 
-     res.render(__dirname+"home.ejs");
+     res.render("home.ejs");
 
 });
 
 app.get("/register", function(req, res){
 
-res.render(__dirname+"register.ejs");
+res.render("register.ejs");
 });
 
 app.get("/login", function(req, res){
 
-res.render(__dirname+"login.ejs");
+res.render("login.ejs");
 })
 
 app.get("/products", function(req, res){
 
   if(req.isAuthenticated()){
-    res.render(__dirname+"products.ejs",{name: req.user.name});
+    res.render("products.ejs",{name: req.user.name});
   }else{
     res.redirect("/login");
   }
@@ -98,7 +98,7 @@ app.get("/men", function(req, res){
 
   Data.find({gender: "male"},function(err, found){
     console.log(found);
-    res.render(__dirname+"men.ejs",{items: found});
+    res.render("men.ejs",{items: found});
 
   });
 
@@ -107,7 +107,7 @@ app.get("/women", function(req, res){
 Data.find({gender: "female"}, function(err, found){
 
   console.log(found);
-  res.render(__dirname+"women.ejs", {items: found});
+  res.render("women.ejs", {items: found});
 });
 
 });
@@ -116,19 +116,19 @@ app.get("/kids", function(req, res){
 
   Data.find({gender: "kids"}, function(err, found){
     console.log(found);
-    res.render(__dirname+"kids.ejs", {items: found});
+    res.render("kids.ejs", {items: found});
   });
 });
 
 app.get("/contact", function(req, res){
 
 
-    res.render(__dirname+"contact.ejs");
+    res.render("contact.ejs");
 })
 
 app.get("/about", function(req, res){
 
-    res.render(__dirname+"about.ejs",{about: aboutContent});
+    res.render("about.ejs",{about: aboutContent});
 
 });
 
@@ -167,7 +167,7 @@ if(err){
 }else{
   number = req.body.username;
   passport.authenticate("local")(req, res, function(){
-    res.render(__dirname+"welcome.ejs");
+    res.render("welcome.ejs");
   });
 }
 
@@ -206,7 +206,7 @@ Data.findOne({product: product}, function(err , found){
     console.log(err);
   }else{
     console.log(found);
-    res.render(__dirname+"cart.ejs",{result: found});
+    res.render("cart.ejs",{result: found});
   }
 });
 
@@ -234,7 +234,7 @@ User.findById(req.user.id, function(err, found){
       console.log(num);
       found.orders.push(num + ", " + product + ", " + date + ",  " + address);
       found.save(function(){
-        res.render(__dirname+"success.ejs",{date: date, address: address, order: num});
+        res.render("success.ejs",{date: date, address: address, order: num});
       });
     }
   }
@@ -243,7 +243,7 @@ User.findById(req.user.id, function(err, found){
 
 app.post("/confirm", function(req, res){
 const product = req.body.clothing;
-  res.render(__dirname+"confirm.ejs",{id: product, address: req.user.address});
+  res.render("confirm.ejs",{id: product, address: req.user.address});
 })
 
 
@@ -260,7 +260,7 @@ if(req.isAuthenticated()){
     res.send("Sorry no matched item found :(")
   }else{
     console.log(found);
-    res.render(__dirname+"searchresult.ejs",{items: found});
+    res.render("searchresult.ejs",{items: found});
 
   }
 
