@@ -25,6 +25,10 @@
     font-size: 12px;
     letter-spacing: 5px;
 }
+.home{
+  padding-top: 10%;
+  padding-bottom: 5%;
+}
 .Congratulations{
   font-weight: bold;
   padding-top: 5%;
@@ -42,6 +46,7 @@
 
 h1{
   font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 h5{
   line-height: 30px;

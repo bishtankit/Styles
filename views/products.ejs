@@ -6,12 +6,12 @@
 
   <div class="dropdown">
   <button class="btn btn-light btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <h5 style="margin: 0;">Browse Products</h5>
+    <h5 style="margin: 0; font-size: 25px;">Browse Products</h5>
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="/men">Men</a>
-    <a class="dropdown-item" href="/women">Women</a>
-    <a class="dropdown-item" href="/kids">Kids</a>
+  <h3><a class="dropdown-item" href="/men">Men</a></h3>
+  <h3><a class="dropdown-item" href="/women">Women</a></h3>
+    <h3><a class="dropdown-item" href="/kids">Kids</a></h3>
   </div>
 </div>
 </div>
@@ -19,10 +19,10 @@
 
 <div class="dropdown">
     <button class="btn btn-light btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <h5 style="margin: 0;"> <%=name%> </h5>
+    <h3 style="margin: 0;"> <%=name%> </h3>
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="/logout">logout</a>
+    <h3><a class="dropdown-item" href="/logout">logout</a></h3>
   </div>
 </div>
 
@@ -37,7 +37,7 @@
   <div class="col-6">
     <form action="/cart" method="post">
       <div class="products">
-        <button class="btn btn-lg" type="submit" name="clothing" value="pant001">  <img src="/images/pant1.jpg" alt="hoodie" style="height: 100%; width: 100%;">  </button>
+        <button class="btn btn-block" type="submit" name="clothing" value="pant001">  <img src="/images/pant1.jpg" alt="hoodie" style="height: 109%; width: 109%">  </button>
           <h5>Formal Pant</h5>
           <h5>Color: Blue</h5>
           <h5>Price:  ₹ 1000</h5>
@@ -48,7 +48,7 @@
   <div class="col-6">
     <form action="/cart" method="post">
       <div class="products">
-        <button class="btn btn-lg" type="submit" name="clothing" value="pant002"><img src="/images/pant2.jpg" alt="hoodie" style="height: 100%; width: 100%;"></button>
+        <button class="btn btn-block" type="submit" name="clothing" value="pant002"><img src="/images/pant2.jpg" alt="hoodie" style="height: 109%; width: 109%;"></button>
           <h5>Formal Pant</h5>
           <h5>Color: Navy Blue</h5>
           <h5>Price:  ₹ 800</h5>
@@ -59,7 +59,7 @@
   <div class="col-6">
     <form action="/cart" method="post">
       <div class="products">
-        <button class="btn btn-lg" type="submit" name="clothing" value="hoodie001"><img src="/images/hood1.jpg" alt="hoodie" style="height: 100%; width: 100%;"></button>
+        <button class="btn btn-block" type="submit" name="clothing" value="hoodie001"><img src="/images/hood1.jpg" alt="hoodie" style="height: 109%; width: 109%;"></button>
           <h5>Extra fit Hoodie</h5>
           <h5>Color: black</h5>
           <h5>Price:  ₹ 800</h5>
@@ -70,10 +70,32 @@
   <div class="col-6">
     <form action="/cart" method="post">
       <div class="products">
-          <button class="btn btn-lg" type="submit" name="clothing" value="hoodie002"><img src="/images/hood2.jpg" alt="hoodie" style="height: 100%; width: 100%;"></button>
+          <button class="btn btn-block" type="submit" name="clothing" value="hoodie002"><img src="/images/hood2.jpg" alt="hoodie" style="height: 109%; width: 109%;"></button>
           <h5>Hoodie</h5>
           <h5>Color: Grey</h5>
           <h5>Price:  ₹ 1200</h5>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-6">
+    <form action="/cart" method="post">
+      <div class="products">
+        <button class="btn btn-block" type="submit" name="clothing" value="pant001">  <img src="/images/pant1.jpg" alt="hoodie" style="height: 109%; width: 109%">  </button>
+          <h5>Formal Pant</h5>
+          <h5>Color: Blue</h5>
+          <h5>Price:  ₹ 1000</h5>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-6">
+    <form action="/cart" method="post">
+      <div class="products">
+        <button class="btn btn-block" type="submit" name="clothing" value="pant002"><img src="/images/pant2.jpg" alt="hoodie" style="height: 109%; width: 109%;"></button>
+          <h5>Formal Pant</h5>
+          <h5>Color: Navy Blue</h5>
+          <h5>Price:  ₹ 800</h5>
       </div>
     </form>
   </div>

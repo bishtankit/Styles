@@ -1,6 +1,6 @@
 <%- include('partials/header') %>
 <div class="container mt-5">
-  <h1>Register</h1>
+  <h1 style="font-size: 350%; padding-bottom: 5%;">Register</h1>
 
   <div class="row">
     <div class="col-sm-8">
@@ -10,7 +10,7 @@
           <!-- Makes POST request to /register route -->
           <form action="/register" method="POST">
             <div class="form-group">
-              <label for="username">Phone number</label>
+              <label for="username" style="font-size: 160%; line-height: 50px; margin: 0;">Phone number</label>
               <input type="number" class="form-control" name="username" required>
             </div>
             <!-- <div class="form-group">
@@ -18,14 +18,14 @@
               <input type="email" class="form-control" name="email" required>
             </div> -->
             <div class="form-group">
-              <label for="password">Create a Password</label>
+              <label for="password" style="font-size: 160%; line-height: 50px; margin: 0;">Create a Password</label>
               <input type="password" class="form-control" name="password" required>
             </div>
             <!-- <div class="form-group">
               <label for="phone">Phone Number</label>
               <input type="Number" class="form-control" name="phone" required>
             </div> -->
-            <button type="submit" class="btn btn-dark">Create account</button>
+            <button type="submit" class="btn btn-dark" lass="btn btn-dark" style="font-size: 120%;">Create account</button>
             <a href="/login">Already have an account?</a>
           </form>
 
@@ -34,6 +34,7 @@
     </div>
 
   </div>
+    <hr style="padding: 10%;">
 </div>
 
 <%- include('partials/footer') %>
