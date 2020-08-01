@@ -274,12 +274,13 @@ if(req.isAuthenticated()){
 });
 
 
-var server = app.listen(process.env.PORT || 5000, function () {
-  var port = server.address().port;
-  console.log("Express is working on port " + port);
-});
-
-
-// app.listen(3000, function() {
-//   console.log("Server started Successfully");
+// var server = app.listen(process.env.PORT || 5000, function () {
+//   var port = server.address().port;
+//   console.log("Express is working on port " + port);
 // });
+
+var port = process.env.PORT || 8080;
+
+app.listen(port, function() {
+  console.log("Server started Successfully");
+});
